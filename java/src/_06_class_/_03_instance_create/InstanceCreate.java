@@ -1,6 +1,6 @@
-package _01_.class_._03_instance_create;
+package _06_class_._03_instance_create;
 
-import _01_.class_._02_class_coposition.ClassComposition;
+import _06_class_._02_class_coposition.ClassComposition;
 
 public class InstanceCreate {
 	public static void main(String[] args) {

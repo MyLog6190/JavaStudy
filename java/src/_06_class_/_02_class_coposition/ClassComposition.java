@@ -1,4 +1,4 @@
-package _01_.class_._02_class_coposition;
+package _06_class_._02_class_coposition;
 
 public class ClassComposition {
 /*

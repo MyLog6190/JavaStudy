@@ -1,4 +1,4 @@
-package _01_.class_._01_class_writing;
+package _06_class_._01_class_writing;
 
 public class ClassExample {
 	/*

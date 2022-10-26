@@ -1,4 +1,4 @@
-package _01_.class_._04_constructor_overloading;
+package _06_class_._04_constructor_overloading;
 
 public class Main {
 	public static void main(String[] args) {
