@@ -8,18 +8,24 @@ public class SutdaDeck {
 	*/
 	/*
 	*/
+	
+	public SutdaDeck() {
+		new SutdaCard();
+	}
+	
 	// SutdaDeck
 	public void shuffle() {
 		// TODO Auto-generated method stub
 		
 	}
 	
+
 	public char[] pick() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 	
-	public char[] pick(int i) {
+	public char[] pick(int index) {
 		// TODO Auto-generated method stub
 		return null;
 	}
