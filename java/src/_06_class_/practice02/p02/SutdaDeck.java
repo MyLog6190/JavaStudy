@@ -1,33 +1,48 @@
 package _06_class_.practice02.p02;
 
+import java.util.Iterator;
+
 public class SutdaDeck {
 	final int CARD_NUM = 20;
 	SutdaCard[] cards = new SutdaCard[CARD_NUM];
-	/*
-	문제 7-1 의 답이므로 내용생략
-	*/
-	/*
-	*/
 	
 	public SutdaDeck() {
-		new SutdaCard();
+		for(int i = 0; i < CARD_NUM/2; i++) {
+			cards[i] = new SutdaCard((i+1), i+1 == 1 || i+1 == 3 || i+1 == 8?true:false);
+		}
+		
+		for(int j = 10; j < CARD_NUM; j++) {
+			cards[j] = new SutdaCard((j-9), false);
+		}
 	}
 	
 	// SutdaDeck
 	public void shuffle() {
-		// TODO Auto-generated method stub
+		int index[] = new int[20];
+		SutdaCard[] copyCards = new SutdaCard[CARD_NUM];
+		for(int i = 0; i < CARD_NUM; i++) {
+			copyCards[i] = cards[i];
+			index[i] = (int) Math.floor( (Math.random() * CARD_NUM ) );
+			for(int j = 0; j < i; j++) {
+				if(index[i] == index[j]) {
+					i--;
+					break;
+				}
+			}
+		}
 		
+		for(int i = 0; i < index.length; i++) { cards[i] = copyCards[index[i]]; }
+		 
 	}
 	
 
-	public char[] pick() {
-		// TODO Auto-generated method stub
-		return null;
+	public SutdaCard pick() {
+		int ran = (int) Math.floor( (Math.random() * CARD_NUM) );
+		return cards[ran];
 	}
 	
-	public char[] pick(int index) {
-		// TODO Auto-generated method stub
-		return null;
+	public SutdaCard pick(int index) {
+		return cards[index];
 	}
 	
 
@@ -55,13 +70,12 @@ class Exercise7_2 {
 		SutdaDeck deck = new SutdaDeck();
 		System.out.println(deck.pick(0));
 		System.out.println(deck.pick());
-		
 		deck.shuffle();
 		
-		for(int i=0; i < deck.cards.length;i++)
+		for(int i=0; i < deck.cards.length;i++) 
 			System.out.print(deck.cards[i]+",");
 		
 		System.out.println();
 		System.out.println(deck.pick(0));
-	}
+	}	
 }
